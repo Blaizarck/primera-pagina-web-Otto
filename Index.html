@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mejores Futbolistas Españoles</title>
+</head>
+    <body>
+     
+    <h1>Los Mejores Futbolistas Españoles</h1>
+    <p>En este apartado se hará un pequeño formulario para ver si se ha aprendido algo de algún jugador histórico español.</p>
+  
+
+  <h1>Formulario sobre futbolistas españoles</h1>
+
+  <form action="procesar.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Información básica</legend>
+
+      <label for="nombre">Nombre del jugador:</label>
+      <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Ej. Andrés Iniesta" required />
+
+      <br></br>
+      
+      <label for="biografia">Biografía breve:</label>
+      <textarea id="biografia" name="biografia" rows="4" cols="40" placeholder="Escribe una breve descripción..." accesskey="b"></textarea>
+
+      <br></br>
+      
+      <label>Posición:</label>
+      <input type="radio" name="posicion" value="Portero" id="portero" tabindex="1" />
+      <label for="portero">Portero</label>
+      <input type="radio" name="posicion" value="Defensa" id="defensa" tabindex="2" />
+      <label for="defensa">Defensa</label>
+      <input type="radio" name="posicion" value="Centrocampista" id="centrocampista" tabindex="3" />
+      <label for="centrocampista">Centrocampista</label>
+      <input type="radio" name="posicion" value="Delantero" id="delantero" tabindex="4" />
+      <label for="delantero">Delantero</label>
+
+      <br></br>
+
+      <label for="seleccion">¿Ha jugado en la selección española?</label>
+      <input type="checkbox" id="seleccion" name="seleccion" value="Sí"/>Sí
+      <input type="checkbox" id="seleccion" name="seleccion" value="Sí"/>No
+
+      <br></br>
+      
+      <label for="foto">Sube una foto del jugador:</label>
+      <input type="file" id="foto" name="foto" />
+      <input type="hidden" name="formularioID" value="futbolistas2025"/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Clubes y trayectoria</legend>
+      <label for="club">Club actual:</label>
+      <select name="club" id="club">
+        <option value="Barcelona">FC Barcelona</option>
+        <option value="Real Madrid">Real Madrid</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="clubes">Clubes anteriores:</label>
+      <select name="clubes[]" id="clubes" multiple>
+        <option value="Valencia">Valencia CF</option>
+        <option value="Sevilla">Sevilla FC</option>
+        <option value="Villarreal">Villarreal CF</option>
+        <option value="Betis">Real Betis</option>
+      </select>
+
+      <label for="liderazgo">Nivel de liderazgo:</label>
+      <input type="text" id="liderazgo" name="liderazgo" value="Alto" readonly/>
+    </fieldset>
+
+    <br></br>
+
+    <div class="botones">
+
+      <input type="submit" value="Enviar"/>
+      <input type="reset" value="Limpiar"/>
+
+    </div>
+  </form>
+
+  <div class="navegacion-final">
+    <h2>Volver a otros documentos</h2>
+
+    <a href="lm_ut2_01.html"><img src="mbappe.webp" alt="Ir al primer documento" width="150" height="150"/></a><br></br>
+    <a href="lm_ut2_02.html"><img src="lamine-yamal-balon-de-playa.jpeg"  width="150" height="150" alt="Ir al segundo documento" /></a>
+  
+    </body>
+</html>
